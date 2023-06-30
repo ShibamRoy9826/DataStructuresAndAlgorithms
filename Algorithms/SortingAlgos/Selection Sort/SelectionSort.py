@@ -31,8 +31,8 @@ def NaiveSelectionSort(lst):
 
 	for i in range(len(lst)):
 		mInd=findMinIndex(lst)
-		sortedArr.append(mInd)
-		lst[i]=float('inf')
+		sortedArr.append(lst[mInd])
+		lst[mInd]=float('inf')
 	for i in range(len(lst)):
 		lst[i]=sortedArr[i]
 def SelectionSort(lst):
