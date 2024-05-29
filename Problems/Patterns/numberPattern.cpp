@@ -6,17 +6,29 @@ void printRepeat(int g, char c){
     cout<<c;
   }
 }
+
+void printNumbers(int n){
+  for(int i=1;i<=n;++i){
+    if(i!=n){
+      cout<<i<<" ";
+    }
+    else{
+      cout<<i;
+    }
+    }
+}
 int calcToPrint(int i){
     return 1+2*(i-1);
 
 }
 
 
-void PyramidCentered(int num){
+void numberPattern(int num){
   int gapCounter=num-1;
   for(int i=1;i<=num;++i){
     printRepeat(gapCounter,' ');
-    printRepeat(calcToPrint(i),'*');
+    //printNumbers(calcToPrint(i));
+    printNumbers(i);
     printRepeat(gapCounter,' ');
     cout<<endl;
     gapCounter--;
@@ -33,9 +45,7 @@ int main(){
   cin >> n;
   cout<<endl;
   
-  PyramidCentered(n);
-
+  numberPattern(n);
   return 0;
-
 
 }

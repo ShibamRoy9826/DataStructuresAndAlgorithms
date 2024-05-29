@@ -13,7 +13,7 @@ int calcToPrint(int gapC, int total){
 
 void PyramidCentered(int num){
   int gapCounter=0;
-  for(int i=1;i<num+2;++i){
+  for(int i=1;i<=num+1;++i){
     printRepeat(gapCounter,' ');
     printRepeat(calcToPrint(gapCounter,num),'*');
     printRepeat(gapCounter,' ');
@@ -32,5 +32,6 @@ int main(){
   cout<<endl;
   
   PyramidCentered(n-1);
+  return 0;
 
 }

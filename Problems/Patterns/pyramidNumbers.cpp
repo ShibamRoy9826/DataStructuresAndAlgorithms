@@ -4,13 +4,14 @@ using namespace std;
 
 void printTimes(int n){
   for(int i=0;i<n;++i){
-    cout<<"*";
+    cout<<n;
   }
 }
 
 
-void invertedPyramid(int num){
-  for(int i=num;i>0;--i){
+void Pyramid(int num){
+  for(int i=1;i<num+1;++i){
+
     printTimes(i);
     cout<<endl;
   }
@@ -24,7 +25,8 @@ int main(){
   cin >> n;
   cout<<endl;
   
-  invertedPyramid(n);
+  Pyramid(n);
   return 0;
+
 
 }

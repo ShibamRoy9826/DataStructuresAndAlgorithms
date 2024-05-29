@@ -12,7 +12,7 @@ int calcToPrint(int i){
 }
 
 
-void PyramidCentered(int num){
+void star(int num){
   int gapCounter=num-1;
   for(int i=1;i<=num;++i){
     printRepeat(gapCounter,' ');
@@ -20,6 +20,14 @@ void PyramidCentered(int num){
     printRepeat(gapCounter,' ');
     cout<<endl;
     gapCounter--;
+  }
+  gapCounter=0;
+  for(int j=num;j>0;--j){
+    printRepeat(gapCounter,' ');
+    printRepeat(calcToPrint(j),'*');
+    printRepeat(gapCounter,' ');
+    cout<<endl;
+    gapCounter++;
   }
   cout<<endl;
   
@@ -33,9 +41,6 @@ int main(){
   cin >> n;
   cout<<endl;
   
-  PyramidCentered(n);
-
+  star(n);
   return 0;
-
-
 }

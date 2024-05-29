@@ -2,17 +2,20 @@
 using namespace std;
 
 
-void printTimes(int n){
+void printTimes(int n,char c){
   for(int i=0;i<n;++i){
-    cout<<"*";
+    cout<<c;
   }
 }
 
 
 void Pyramid(int num){
+  int gapCounter=num-1;
   for(int i=1;i<=num;++i){
-    printTimes(i);
+    printTimes(gapCounter,' ');
+    printTimes(i,'*');
     cout<<endl;
+    gapCounter--;
   }
 }
 

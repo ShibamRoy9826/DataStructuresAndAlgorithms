@@ -41,6 +41,7 @@ int main(){
   cout<<endl;
 
   hollowRectangle(row,col);
+  return 0;
   
 
 }
